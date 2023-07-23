@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
+    [SerializeField]
+    private UIManager uiManager;
     private LandingPadColumn[] columns;
     private Color targetColor;
     private int targetNumber;
@@ -12,7 +14,6 @@ public class TargetManager : MonoBehaviour
     {
         columns = GetComponentsInChildren<LandingPadColumn>();
         CreateNewTarget();
-        Debug.Log("target: " + targetColor.ToString() + " - " + targetNumber);
     }
 
     public void CreateNewTarget()
@@ -25,6 +26,8 @@ public class TargetManager : MonoBehaviour
         diceRoll = Random.Range(0, numberOfPads);
         targetColor = targetColumn.GetPadColor(diceRoll);
         targetNumber = targetColumn.GetPadNumber(diceRoll);
+        uiManager.SetLandingPadColor(targetColor);
+        uiManager.SetLandingPadNumber(targetNumber);
     }
 
     public bool CheckMatch(LandingPad landingPad)
