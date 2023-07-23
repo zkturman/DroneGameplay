@@ -15,9 +15,14 @@ public class DroneInputController : MonoBehaviour
     public bool MoveDown;
     [SerializeField]
     private UIManager uiManager;
+
+    private void Awake()
+    {
+        uiManager.SetFansOutOfUse();
+    }
+
     public void OnFrontLeftFan(InputValue value)
     {
-        Debug.Log("FrontLeft");
         if (!allFansShortcut)
         {
             setFanMaskBit(DroneFans.FRONT_LEFT_FAN, value.isPressed);
@@ -27,7 +32,6 @@ public class DroneInputController : MonoBehaviour
 
     public void OnFrontRightFan(InputValue value)
     {
-        Debug.Log("FrontRight");
         if (!allFansShortcut)
         {
             setFanMaskBit(DroneFans.FRONT_RIGHT_FAN, value.isPressed);
@@ -37,7 +41,6 @@ public class DroneInputController : MonoBehaviour
 
     public void OnBackLeftFan(InputValue value)
     {
-        Debug.Log("BackLeft");
         if (!allFansShortcut)
         {
             setFanMaskBit(DroneFans.BACK_LEFT_FAN, value.isPressed);
@@ -47,7 +50,6 @@ public class DroneInputController : MonoBehaviour
 
     public void OnBackRightFan(InputValue value)
     {
-        Debug.Log("BackRight");
         if (!allFansShortcut)
         {
             setFanMaskBit(DroneFans.BACK_RIGHT_FAN, value.isPressed);
@@ -57,7 +59,6 @@ public class DroneInputController : MonoBehaviour
 
     public void OnAllFans(InputValue value)
     {
-        Debug.Log("AllFans");
         if (value.isPressed)
         {
             fanMask = DroneFans.GetUpValue();
