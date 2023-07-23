@@ -285,23 +285,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99605227
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.087143324
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.001474104
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.016849076
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448422002054749266, guid: b8c5de00063898242910230cb837de87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.938
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8c5de00063898242910230cb837de87, type: 3}
@@ -647,6 +647,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548954526}
   m_CullTransparentMesh: 1
+--- !u!95 &572491507 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6843180980222250053, guid: b8c5de00063898242910230cb837de87, type: 3}
+  m_PrefabInstance: {fileID: 120339613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &662334741
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +778,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!95 &756262201 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6843180981097974689, guid: b8c5de00063898242910230cb837de87, type: 3}
+  m_PrefabInstance: {fileID: 120339613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &781166771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +970,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786991902}
   m_CullTransparentMesh: 1
+--- !u!95 &809896728 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6843180980650296002, guid: b8c5de00063898242910230cb837de87, type: 3}
+  m_PrefabInstance: {fileID: 120339613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &813407071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1244,7 @@ MonoBehaviour:
   droneBody: {fileID: 899734794}
   upwardForce: 15
   planarForce: 15
+  fanOperator: {fileID: 2004678802}
 --- !u!114 &899734797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2208,6 +2224,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964597757}
   m_CullTransparentMesh: 1
+--- !u!95 &1970662343 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6843180980813554161, guid: b8c5de00063898242910230cb837de87, type: 3}
+  m_PrefabInstance: {fileID: 120339613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1981112569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2317,6 +2338,29 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c268c88ab39dfc141b59caeb5318ebcc, type: 3}
+--- !u!1 &2004678799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5924121413617780456, guid: b8c5de00063898242910230cb837de87, type: 3}
+  m_PrefabInstance: {fileID: 120339613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2004678802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004678799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86eb4a606d6a8446918bac74076a1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontLeftFan: {fileID: 809896728}
+  frontRightFan: {fileID: 1970662343}
+  backLeftFan: {fileID: 572491507}
+  backRightFan: {fileID: 756262201}
+  droneModel: {fileID: 120339614}
+  rotationAmount: 10
 --- !u!1 &2100365211
 GameObject:
   m_ObjectHideFlags: 0
