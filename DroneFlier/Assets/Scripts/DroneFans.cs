@@ -30,4 +30,30 @@ public static class DroneFans
     {
         return FRONT_LEFT_FAN | FRONT_RIGHT_FAN | BACK_LEFT_FAN | BACK_RIGHT_FAN;
     }
+
+    public static bool IsValidCombination(int fanMask)
+    {
+        bool isValid = false;
+        if (fanMask == GetForwardValue())
+        {
+            isValid = true;
+        }
+        else if (fanMask == GetBackwardValue())
+        {
+            isValid = true;
+        }
+        else if (fanMask == GetLeftValue())
+        {
+            isValid = true;
+        }
+        else if (fanMask == GetRightValue())
+        {
+            isValid = true;
+        }
+        else if (fanMask == GetUpValue())
+        {
+            isValid = true;
+        }
+        return isValid;
+    }
 }
